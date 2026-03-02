@@ -3,7 +3,10 @@ package com.fpolizzi;
 /**
  * Created by fpolizzi on 28.02.26
  */
+@FunctionalInterface
 public interface EmailSender {
 
-    void send();
+    // change the abstract method that
+    // you now have to pass an email String
+    void send(String from, String to);
 }
