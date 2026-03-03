@@ -9,6 +9,7 @@ import java.util.function.Consumer;
 public class Names {
 
     static void main() {
+
         // define a List of names
         List<String> names = List.of("Jamila", "Alex", "Mariam");
 
@@ -23,5 +24,13 @@ public class Names {
                 name -> System.out.println(name);
 
         names.forEach(stringConsumer);
+
+        // if the lambda is performing only one operation
+        // on the argument, we can replace it by using
+        // method reference to this argument
+        Consumer<String> stringConsumerTwo =
+                System.out::println;
+
+        names.forEach(stringConsumerTwo);
     }
 }
