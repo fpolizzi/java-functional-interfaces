@@ -14,13 +14,13 @@
 | Lazy evaluation          | Expressions are not evaluated until their values are needed.                                                                                      |
 | Recursion                | Functions call themselves to perform iterative tasks.                                                                                             |
 
-## What is a Functional Interface?
+### What is a Functional Interface?
 
 A functional interface is an interface that has only one abstract method.
 
 Functional interfaces can be annotated with `@FunctionalInterface`.
 
-## Working with Lambdas
+### Working with Lambdas
 
 A lambda expression is an anonymous function that can be used 
 to create instances of functional interfaces.
@@ -54,7 +54,7 @@ public class Main {
 }
 ```
 
-## Method References
+### Method References
 
 ```java
 import java.util.List;
@@ -73,3 +73,20 @@ public class Main {
     }
 }
 ```
+
+## Functional Interfaces
+
+The `java.util.function` package provides several functional interfaces that are commonly used in Java programming.
+Functional Interfaces provide target types for lambda expressions and method references.
+
+### Function
+
+The **Function** interface is a part of the `java.util.function` package. 
+It represents a function that accepts one argument and produces a result. This is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
+
+The **Function** interface has a single abstract method called **apply** which takes an argument of type **T** and returns a result of type **R**.
+
+```java
+Function<String, Integer> function = (String s) -> s.length();
+```
+
