@@ -105,3 +105,12 @@ int result = chainedFunction.apply("Hello");
 System.out.println(result); // Output: 10
 ```
 
+### BiFunction
+
+The **BiFunction** interface is a part of the **java.util.function** package. It represents a function that accepts two input arguments and produces a result. This is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
+
+The **BiFunction** interface has a single abstract method called **apply** which takes two arguments of types **T** and **U** and returns a result of type **R**
+
+```java
+BiFunction<String, Integer, Integer> biFunction = (String s, Integer i) -> s.length() + i;
+```
