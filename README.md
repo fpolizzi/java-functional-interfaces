@@ -90,3 +90,18 @@ The **Function** interface has a single abstract method called **apply** which t
 Function<String, Integer> function = (String s) -> s.length();
 ```
 
+### Chaining Functions
+
+In Java, you can chain multiple functions together to create a sequence of operations. This is particularly useful when you want to perform a series of transformations on data. 
+The **Function** interface provides a method called **andThen** that allows you to chain functions together.
+
+```java
+Function<String, Integer> function1 = (String s) -> s.length();
+Function<Integer, Integer> function2 = (Integer i) -> i * 2;
+
+Function<String, Integer> chainedFunction = function1.andThen(function2);
+
+int result = chainedFunction.apply("Hello");
+System.out.println(result); // Output: 10
+```
+
