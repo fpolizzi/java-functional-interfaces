@@ -114,3 +114,13 @@ The **BiFunction** interface has a single abstract method called **apply** which
 ```java
 BiFunction<String, Integer, Integer> biFunction = (String s, Integer i) -> s.length() + i;
 ```
+
+### Consumer
+
+The **Consumer** interface is a part of the **java.util.function** package. It represents an operation that accepts a single input argument and returns no result. This is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
+
+The **Consumer** interface has a single abstract method called **accept** which takes an argument of type T.
+
+```java
+Consumer<String> consumer = (String s) -> System.out.println(s);
+```
