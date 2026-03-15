@@ -8,7 +8,7 @@ import java.util.function.Predicate;
  */
 public class BiPredicateMain {
 
-    static void main(String[] args) {
+    static void main() {
 
         var email = "hello@amigoscode.com";
 
