@@ -14,13 +14,13 @@
 | Lazy evaluation          | Expressions are not evaluated until their values are needed.                                                                                      |
 | Recursion                | Functions call themselves to perform iterative tasks.                                                                                             |
 
-## What is a Functional Interface?
+### What is a Functional Interface?
 
 A functional interface is an interface that has only one abstract method.
 
 Functional interfaces can be annotated with `@FunctionalInterface`.
 
-## Working with Lambdas
+### Working with Lambdas
 
 A lambda expression is an anonymous function that can be used 
 to create instances of functional interfaces.
@@ -54,7 +54,7 @@ public class Main {
 }
 ```
 
-## Method References
+### Method References
 
 ```java
 import java.util.List;
@@ -72,4 +72,76 @@ public class Main {
          names.forEach(System.out::println);
     }
 }
+```
+
+## Functional Interfaces
+
+The `java.util.function` package provides several functional interfaces that are commonly used in Java programming.
+Functional Interfaces provide target types for lambda expressions and method references.
+
+### Function
+
+The **Function** interface is a part of the `java.util.function` package. 
+It represents a function that accepts one argument and produces a result. This is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
+
+The **Function** interface has a single abstract method called **apply** which takes an argument of type **T** and returns a result of type **R**.
+
+```java
+Function<String, Integer> function = (String s) -> s.length();
+```
+
+### Chaining Functions
+
+In Java, you can chain multiple functions together to create a sequence of operations. This is particularly useful when you want to perform a series of transformations on data. 
+The **Function** interface provides a method called **andThen** that allows you to chain functions together.
+
+```java
+Function<String, Integer> function1 = (String s) -> s.length();
+Function<Integer, Integer> function2 = (Integer i) -> i * 2;
+
+Function<String, Integer> chainedFunction = function1.andThen(function2);
+
+int result = chainedFunction.apply("Hello");
+System.out.println(result); // Output: 10
+```
+
+### BiFunction
+
+The **BiFunction** interface is a part of the **java.util.function** package. It represents a function that accepts two input arguments and produces a result. This is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
+
+The **BiFunction** interface has a single abstract method called **apply** which takes two arguments of types **T** and **U** and returns a result of type **R**
+
+```java
+BiFunction<String, Integer, Integer> biFunction = (String s, Integer i) -> s.length() + i;
+```
+
+### Consumer
+
+The **Consumer** interface is a part of the **java.util.function** package. It represents an operation that accepts a single input argument and returns no result. This is a functional interface, which means it can be used as the assignment target for a lambda expression or method reference.
+
+The **Consumer** interface has a single abstract method called **accept** which takes an argument of type T.
+
+```java
+Consumer<String> consumer = (String s) -> System.out.println(s);
+```
+
+### Predicate and BiPredicate
+
+The **Predicate** and **BiPredicate** interfaces are part of the java.util.function package. They represent boolean-valued functions of one and two arguments, respectively. 
+These are functional interfaces, which means they can be used as the assignment target for a lambda expression or method reference.
+
+#### Predicate
+
+The **Predicate** interface has a single abstract method called test which takes an argument of type T and returns a boolean.
+
+```java
+Predicate<String> predicate = (String s) -> s.length() > 0;
+```
+
+#### BiPredicate
+
+The **BiPredicate** interface has a single abstract method called test which takes two arguments of types T and U and returns a boolean.
+
+```java
+BiPredicate<String, Integer> biPredicate = (String s, Integer i) -> s.length() > i;
 ```
