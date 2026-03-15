@@ -124,3 +124,24 @@ The **Consumer** interface has a single abstract method called **accept** which 
 ```java
 Consumer<String> consumer = (String s) -> System.out.println(s);
 ```
+
+### Predicate and BiPredicate
+
+The **Predicate** and **BiPredicate** interfaces are part of the java.util.function package. They represent boolean-valued functions of one and two arguments, respectively. 
+These are functional interfaces, which means they can be used as the assignment target for a lambda expression or method reference.
+
+#### Predicate
+
+The **Predicate** interface has a single abstract method called test which takes an argument of type T and returns a boolean.
+
+```java
+Predicate<String> predicate = (String s) -> s.length() > 0;
+```
+
+#### BiPredicate
+
+The **BiPredicate** interface has a single abstract method called test which takes two arguments of types T and U and returns a boolean.
+
+```java
+BiPredicate<String, Integer> biPredicate = (String s, Integer i) -> s.length() > i;
+```
