@@ -1,4 +1,4 @@
-package com.fpolizzi;
+package com.fpolizzi.getting_started;
 
 /**
  * Created by fpolizzi on 28.02.26

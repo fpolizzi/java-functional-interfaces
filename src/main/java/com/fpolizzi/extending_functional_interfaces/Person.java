@@ -1,4 +1,4 @@
-package com.fpolizzi.functional;
+package com.fpolizzi.extending_functional_interfaces;
 
 /**
  * Created by fpolizzi on 16.03.26

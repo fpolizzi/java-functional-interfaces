@@ -1,4 +1,4 @@
-package com.fpolizzi.functional;
+package com.fpolizzi.callbacks;
 
 import java.util.function.Consumer;
 

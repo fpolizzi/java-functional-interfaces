@@ -1,4 +1,4 @@
-package com.fpolizzi;
+package com.fpolizzi.getting_started;
 
 import java.util.List;
 import java.util.function.Consumer;

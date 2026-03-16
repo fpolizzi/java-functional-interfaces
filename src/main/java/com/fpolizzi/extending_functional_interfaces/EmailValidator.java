@@ -1,4 +1,4 @@
-package com.fpolizzi.functional;
+package com.fpolizzi.extending_functional_interfaces;
 
 import java.util.function.Function;
 

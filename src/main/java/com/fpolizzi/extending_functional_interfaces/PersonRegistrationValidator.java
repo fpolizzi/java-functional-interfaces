@@ -1,7 +1,7 @@
-package com.fpolizzi.functional;
+package com.fpolizzi.extending_functional_interfaces;
 
-import com.fpolizzi.functional.PersonRegistrationValidator.ValidationResult;
-import static com.fpolizzi.functional.PersonRegistrationValidator.ValidationResult.*;
+import com.fpolizzi.extending_functional_interfaces.PersonRegistrationValidator.ValidationResult;
+import static com.fpolizzi.extending_functional_interfaces.PersonRegistrationValidator.ValidationResult.*;
 
 import java.util.function.Function;
 
